@@ -19,6 +19,9 @@ $(call inherit-product, device/qcom/common/system/av/qti-av.mk)
 # Project ID Quota
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
+# Face Unlock 
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
 # Interfaces
 $(call inherit-product, $(LOCAL_PATH)/interfaces.mk)
 
