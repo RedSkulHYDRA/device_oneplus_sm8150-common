@@ -2,4 +2,25 @@
 <resources>
     <!-- Whether device supports A/B performance flashing -->
 	<item name="support_ab_perf_mode" type="bool">true</item>
+
+    <!-- URL base to find .update and .sign files, %s is expanded to property_device value. Path is suffixed by (expanded) filename_base -->
+	<string name="url_base_update"></string>
+
+    <!-- URL base to find the full zip files, %s is replaced to be property_device value. -->
+	<string name="url_base_full"></string>
+
+    <!-- URL base to find the full zip sha256sum files, %s is replaced to be property_device value. -->
+	<string name="url_base_full_sum"></string>
+
+    <!-- URL base suffix - Used only for download -->
+	<string name="url_base_suffix"></string>
+
+    <!-- the branch name to format URLs with -->
+	<string name="url_branch_name"></string>
+
+    <!-- URL base to fetch all builds. first %s is replaced by branch name later on by property_device -->
+	<string name="url_base_json" formatted="false"></string>
+
+    <!-- github API url, pointing to the OTA json repo. %s formatted as described above -->
+	<string name="url_api_history" formatted="false"></string>
 </resources>
