@@ -15,6 +15,8 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="maintainer_name" translatable="false">RedSkulxHYDRA</string>
+    <string name="maintainer_telegram" translatable="false">https://t.me/Redskulmodschat</string>
     <string name="kernel_name" translatable="false">John Galt</string>
     <string name="kernel_telegram" translatable="false">https://github.com/RealJohnGalt</string>
 </resources>
