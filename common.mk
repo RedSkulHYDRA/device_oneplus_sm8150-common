@@ -22,6 +22,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 # Face Unlock 
 TARGET_FACE_UNLOCK_SUPPORTED := true
 
+# Icon Pack
+$(call inherit-product, vendor/icons/Icons.mk)
+ICONS_VARIANT := launch3r
+
 # Interfaces
 $(call inherit-product, $(LOCAL_PATH)/interfaces.mk)
 
