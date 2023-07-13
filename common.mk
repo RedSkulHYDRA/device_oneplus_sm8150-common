@@ -21,6 +21,10 @@ $(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
 # ParanoidSense
 TARGET_FACE_UNLOCK_SUPPORTED := true
 
+# Icon Pack
+$(call inherit-product, vendor/icons/Icons.mk)
+ICONS_VARIANT := launcher3
+
 # Interfaces
 $(call inherit-product, $(LOCAL_PATH)/interfaces.mk)
 
