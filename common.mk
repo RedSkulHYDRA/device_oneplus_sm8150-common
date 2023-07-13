@@ -12,6 +12,10 @@ $(call inherit-product, vendor/oneplus/sm8150-common/sm8150-common-vendor.mk)
 # Project ID Quota
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
+# Icon Pack
+$(call inherit-product, vendor/icons/Icons.mk)
+ICONS_VARIANT := launch3r
+
 # Interfaces
 $(call inherit-product, $(LOCAL_PATH)/interfaces.mk)
 
