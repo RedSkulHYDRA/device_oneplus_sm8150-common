@@ -19,6 +19,9 @@ ICONS_VARIANT := launcher3
 # GAPPS
 TARGET_BUILD_GAPPS=true
 
+# Inherit from ViPER4AndroidFX
+$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
+
 # Interfaces
 $(call inherit-product, $(LOCAL_PATH)/interfaces.mk)
 
