@@ -16,6 +16,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 $(call inherit-product, vendor/icons/Icons.mk)
 ICONS_VARIANT := launch3r
 
+# GAPPS
+TARGET_BUILD_GAPPS=true
+
 # Interfaces
 $(call inherit-product, $(LOCAL_PATH)/interfaces.mk)
 
