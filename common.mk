@@ -24,7 +24,7 @@ TARGET_FACE_UNLOCK_SUPPORTED := true
 
 # Icon Pack
 $(call inherit-product, vendor/icons/Icons.mk)
-ICONS_VARIANT := launch3r
+ICONS_VARIANT := launcher3
 
 # GAPPS
 TARGET_BUILD_GAPPS=true
