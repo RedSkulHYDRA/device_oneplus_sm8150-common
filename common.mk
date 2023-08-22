@@ -14,7 +14,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 # Icon Pack
 $(call inherit-product, vendor/icons/Icons.mk)
-ICONS_VARIANT := launch3r
+ICONS_VARIANT := launcher3
 
 # GAPPS
 TARGET_BUILD_GAPPS=true
