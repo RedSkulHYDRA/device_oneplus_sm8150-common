@@ -37,12 +37,11 @@ import androidx.preference.PreferenceManager;
 
 import com.yaap.device.DeviceSettings.ModeSwitch.*;
 
-import java.util.List;
 import java.util.Map;
 
 public class Startup extends BroadcastReceiver {
 
-    private static final String KEY_MIGRATION_DONE = "migration_done_2";
+    private static final String KEY_MIGRATION_DONE = "migration_done";
 
     private static final Map<String, String> sKeyFileMap = Map.of(
         // DC Dimming
@@ -81,12 +80,11 @@ public class Startup extends BroadcastReceiver {
                 // must use commit (and not apply) because of what follows!
                 dePrefsEditor.commit();
                 oldPrefsEditor.commit();
-
-                TouchscreenGestureSettings.MainSettingsFragment.migrateTouchscreenGestureStates(context);
             }
-        }
 
-        TouchscreenGestureSettings.MainSettingsFragment.restoreTouchscreenGestureStates(context);
+            // Touchscreen gestures
+            TouchscreenGestureSettings.MainSettingsFragment.restoreTouchscreenGestureStates(context);
+        }
 
         // restoring state from DE shared preferences
         for (Map.Entry<String, String> set : sKeyFileMap.entrySet()) {
@@ -96,12 +94,10 @@ public class Startup extends BroadcastReceiver {
         }
 
         // reset prefs that reflect a state that does not retain a reboot
-        List<String> touchKeys = TouchscreenGestureSettings.MainSettingsFragment.getPrefKeys(context);
         Map<String,?> keys = dePrefs.getAll();
         for (Map.Entry<String,?> entry : keys.entrySet()) {
             final String key = entry.getKey();
             if (sKeyFileMap.containsKey(key)) continue;
-            if (touchKeys.contains(key)) continue;
             if (KEY_MIGRATION_DONE.equals(key)) continue;
             dePrefs.edit().remove(key).commit();
         }
