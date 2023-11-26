@@ -18,6 +18,9 @@ TARGET_BUILD_GAPPS=true
 # Inherit from ViPER4AndroidFX
 $(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
 
+# ParanoidSense
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
 # Interfaces
 $(call inherit-product, $(LOCAL_PATH)/interfaces.mk)
 
